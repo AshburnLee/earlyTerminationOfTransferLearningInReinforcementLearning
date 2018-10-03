@@ -9,6 +9,7 @@ tasks. In the system level, Hadoop is a popular architecture used in distributed
 systems. In the software level, transfer learning has made huge success. The background of
 this project is using transfer learning to reinforcement learning. And it seems that agents do
 not have to learn in the source task completely.
+
 Therefore the goal of this project is finding a general method to early terminate the learning
 processes in the source tasks of reinforcement learning problems. So that the consumption of
 resources can be reduced from unnecessary executions.
