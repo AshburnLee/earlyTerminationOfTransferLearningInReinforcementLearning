@@ -15,10 +15,11 @@ processes in the source tasks of reinforcement learning problems. So that the co
 resources can be reduced from unnecessary executions.
 
 Here is the discription of folders and files:
-- plot
+---
+1. plot
 - *Plot.java*: the class for results visualization.
-
-- myProj
+---
+2. myProj
 - *Algorithm_area.java*: used for calculate areas enclosed by the Accumulate Actions of the starting point and the Accumulate Actions of the vertical threshold.
 - *Algorithm_simulated_annealing.java*: the implementation of simulated annealing.
 - *Algorithm_threshold.java*: the implementation of threshold algorithm.
