@@ -16,10 +16,10 @@ resources can be reduced from unnecessary executions.
 
 Here is the discription of folders and files:
 ---
-1. plot
+### plot
 - *Plot.java*: the class for results visualization.
 ---
-2. myProj
+### myProj
 - *Algorithm_area.java*: used for calculate areas enclosed by the Accumulate Actions of the starting point and the Accumulate Actions of the vertical threshold.
 - *Algorithm_simulated_annealing.java*: the implementation of simulated annealing.
 - *Algorithm_threshold.java*: the implementation of threshold algorithm.
