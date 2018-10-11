@@ -6,12 +6,16 @@ import burlap.domain.singleagent.blockdude.state.BlockDudeState;
 
 import java.io.File;
 
+/**
+ * this is the where all the internal dataset created.
+ * Applying transfer learning to a pair of tasks.
+ * @author junhui
+ */
 public class App_myBlockDude {
 
     public static void main(String[] args) {
 
         /*CHANGE : MAPs, parentPath, optimal, interval.*/
-
 
         //parent path:
         String parentPath_learn0 = "/media/junhui/DATA/project_data_files/Experiment_paperSA_Source/";  //!!!!!!!!!!!!!
@@ -54,7 +58,7 @@ public class App_myBlockDude {
 
         int numRun = 40;
 
-        /**
+        /*
          * loop execution
          */
         for(int i = 0; i<=optimal; i+=interval) {
@@ -86,8 +90,6 @@ public class App_myBlockDude {
                 numTime_non0 += 1;
 
             }
-
-
         }
     }
 }

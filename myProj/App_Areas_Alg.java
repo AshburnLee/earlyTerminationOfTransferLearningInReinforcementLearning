@@ -1,6 +1,13 @@
 package myProj;
 
 
+/**
+ *
+ * teh application of using area metrics to evaluate the goodness of
+ * learning different number of episodes in the source.
+ *
+ * @author junhui
+ */
 public class App_Areas_Alg {
 
     public static void main(String[] args) {
@@ -12,6 +19,7 @@ public class App_Areas_Alg {
 
         Algorithm_area aa = new Algorithm_area();
 
+        //call main method
         aa.getAllAreasForAllE(parentPath, numPlots, interval, 40 ,threshold, false, true);
 
     }

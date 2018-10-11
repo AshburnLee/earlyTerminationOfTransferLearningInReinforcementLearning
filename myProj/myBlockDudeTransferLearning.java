@@ -42,7 +42,10 @@ import burlap.statehashing.HashableStateFactory;
 import burlap.statehashing.simple.SimpleHashableStateFactory;
 import burlap.visualizer.Visualizer;
 
-
+/**
+ * this is modification version of Francesco's BlockDudeTransferLearning
+ * @author junhui
+ */
 public class myBlockDudeTransferLearning implements TransferLearning{
 
     BlockDude bd;
@@ -88,11 +91,11 @@ public class myBlockDudeTransferLearning implements TransferLearning{
     }
 
     /**
-     *
-     * @param outputPath
-     * @param algorithmChoice
-     * @param nEpochs
-     * @param nEpisodes
+     *perform learning process
+     * @param outputPath: where to store data
+     * @param algorithmChoice: choose the learning algrithm
+     * @param nEpochs: 1
+     * @param nEpisodes: number of files in one return.txt
      * @param sourceVFAs: the value function approximation of the previous source(task)
      * @return : tile coding linear value function approximation
      */
@@ -297,6 +300,11 @@ public class myBlockDudeTransferLearning implements TransferLearning{
     }
 
 
+    /**
+     * summation operation
+     * @param list: the object
+     * @return the sum
+     */
     public double sum(List<Double> list){
         double sum = 0;
         for (double i: list){

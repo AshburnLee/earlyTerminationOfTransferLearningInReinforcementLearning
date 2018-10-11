@@ -37,8 +37,6 @@ public class App_mergeSourceTask {
         String outputPathTarget_75 = parentPath + "outputTarget_75_Transfer/return.txt";
 
 
-
-
         ArrayList< ArrayList<Double> > container_15;
         ArrayList< ArrayList<Double> > container_30;
         ArrayList< ArrayList<Double> > container_45;
@@ -48,6 +46,7 @@ public class App_mergeSourceTask {
 
         ReadFiles readFiles = new ReadFiles();
 
+        //create containers that contains Xs and Ys
         container_15 = readFiles.targetAAPlusLastElemFromSourceANDR(
                 outputPathSource_15, outputPathTarget_15, 10,15,10,500);
         container_30 = readFiles.targetAAPlusLastElemFromSourceANDR(
@@ -60,7 +59,7 @@ public class App_mergeSourceTask {
                 outputPathSource_75, outputPathTarget_75, 10,75,10,500);
 
 
-        //Now i have the return2D:
+        //call plot
         Plot.callPlot("plot source and target",
                 null,
                 "Accumulated actions",

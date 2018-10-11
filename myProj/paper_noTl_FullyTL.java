@@ -5,11 +5,16 @@ import plot.Plot;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * For report illustration.
+ * plot no transfer and fully transfer
+ * @author junhui
+ */
 public class paper_noTl_FullyTL {
 
     public static void main(String[] args) {
 
-        // with offset or not:
+        // with offset or not: choose
         boolean offset = true;
         String plotTitle;
 
@@ -18,7 +23,6 @@ public class paper_noTl_FullyTL {
         // 1) file path
         // no TL
         String outputPathTarget_noTransfer =  parentPath + "outputTarget_noTransfer/";
-
 
         // fully learned
         String outputPathSource_30 = parentPath + "outputSource_30/";
@@ -64,10 +68,8 @@ public class paper_noTl_FullyTL {
             }
         }
 
-
         System.out.println(box2.get(0)); // AA
         System.out.println(box2.get(1)); // reward
-
 
         // 3) show plots
         Plot.callPlot(plotTitle,
@@ -86,7 +88,6 @@ public class paper_noTl_FullyTL {
                 Plot.SmoothBySlide(box1.get(1),20),
                 box2.get(0),
                 Plot.SmoothBySlide(box2.get(1),20));
-
 
     }
 }

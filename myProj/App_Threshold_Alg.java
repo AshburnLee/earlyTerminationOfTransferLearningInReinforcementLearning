@@ -3,12 +3,13 @@ package myProj;
 /**
  * For each plot, see how many Actions it took to first reach the threshold,
  * the smaller the better.
+ * @author junhui
  */
 public class App_Threshold_Alg {
 
     public static void main(String[] args) {
 
-        String parentPath = "/media/junhui/DATA/project_data_files/Experiment_paperSA/";  //!!!!!!!!!!!!
+        String parentPath = "/media/junhui/DATA/project_data_files/Experiment_1/";  //!!!!!!!!!!!!
         int numPlots = 15;   //!!!!!!!!!!
         int interval = 2;    //!!!!!!!!!!!!!!!!!
         double threshold = -15.0;

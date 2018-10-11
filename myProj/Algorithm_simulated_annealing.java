@@ -10,6 +10,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * kernel for executing the reinforcement learning
+ * @author junhui
+ */
 class Runner implements Runnable {
 
     private String parentPath = "/media/junhui/DATA/project_data_files/Experiment_paperSA/";
@@ -70,8 +74,14 @@ class Runner implements Runnable {
     }
 }
 
+/**
+ * Applying the SA to the result of each reinforcement learning.
+ */
 public class Algorithm_simulated_annealing {
 
+    /**
+     * constructor
+     */
     public Algorithm_simulated_annealing() {System.out.println("*******Simulated Annealing*******");}
 
     /**

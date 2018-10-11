@@ -8,6 +8,7 @@ import java.util.ArrayList;
 /**
  * Loop version of read files and plots
  * Naive version: see App_mergeSourceTask.java
+ * @author junhui
  */
 public class App_ReadFileAndPlot {
 

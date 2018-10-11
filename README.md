@@ -6,9 +6,11 @@ So finding methods to reduce the execution time and the computational resources 
 Some effective methods have been built to optimize it. For instance in the hardware level, multi-core technology of CUP and 
 the CUDA of Nvidia GPU have been widely used when working with computation intense tasks. In the system level, 
 Hadoop is a popular architecture used in distributed computing systems. In the software level, transfer learning has made huge success. 
-The background of this project is using transfer learning to a pair of reinforcement learning tasks, which can be a abstract of curriculum learning. And it seems that agents do not have to learn in the source task completely.
+The background of this project is using transfer learning to reinforcement learning. And it seems that agents 
+do not have to learn in the source task completely.
 
-Therefore the goal of this project is first check whether the agent has to learn the souce task completely and if the answer is negative, the second is finding a general method to early terminate the learning processes in the source tasks of reinforcement learning problems. So that the consumption of resources can be reduced from unnecessary executions.
+Therefore the goal of this project is finding a general method to early terminate the learning processes in 
+the source tasks of reinforcement learning problems. So that the consumption of resources can be reduced from unnecessary executions.
 
 ## How to use these code
 1. Download the IDE for java
@@ -49,6 +51,8 @@ Now users can create a *HelloWorld.java* program for testing.If everything went 
 4. Code information
 
 In the next section, all the java files are briefly described. And for more information, read the comment of the specific java file.
+
+Bare in mind: change parameters accordingly .
  
 
 ## Description of folders and files:

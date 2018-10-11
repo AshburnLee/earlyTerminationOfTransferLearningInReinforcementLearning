@@ -1,12 +1,9 @@
 package myProj;
 
 
-//        long startTime = System.currentTimeMillis();
-
-//        long elapsedTime = (new Date()).getTime() - startTime;
-//        System.out.println(elapsedTime/1000 + " seconds to run");
-
-
+/**
+ * playground
+ */
 public class test {
 
     public static void main(String[] args) {

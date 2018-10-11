@@ -5,14 +5,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * This is for reading files and pre-process the data.
+ * @author junhui
+ */
 public class ReadFiles {
 
     /**
-     * see LOG for algorithm design
+     * Calculate the average of rewards
      * @param al: a big ArrayList get from a file
      * @param numFiles: nEpoche
      * @param numElem: nEpisodes
-     * @return
+     * @return the processed X and Y
      */
     private ArrayList<Double> GetActionAndRewardBar(ArrayList<Double> al, int numFiles, int numElem){
 
@@ -34,7 +38,7 @@ public class ReadFiles {
 
 
     /**
-     * See LOG for algorithm design
+     * accumulation operation for rewards
      * no need for additional space
      * @param al: the input array list that need to be operated.
      */
@@ -48,7 +52,6 @@ public class ReadFiles {
     }
 
 
-
     /**
      * Function: Read a file and get two columns that we need.
      * See LOG for algorithm design
@@ -56,7 +59,7 @@ public class ReadFiles {
      * @param filePath : input file
      * @param numFiles: num of files
      * @param numElements: num of elements
-     * @return: An 2D ArrayList that contains Actions and Rewards
+     * @return An 2D ArrayList that contains Actions and Rewards
      * @throws IOException
      */
     public ArrayList< ArrayList<Double> > ReadDataFromFiles(String filePath,
@@ -97,14 +100,14 @@ public class ReadFiles {
 
 
     /**
-     * SEE LOG FOR DESGINE
+     * Add the source offset to the target X-axis. to perform strong transfer
      * Add the last element of AA from sourceTask to the AA of targetTask
-     * @param sourceFile:
-     * @param targetFile:
-     * @param numSourceFile:
-     * @param numSourceElem:
-     * @param numTargetFile:
-     * @param numTargetElem:
+     * @param sourceFile: source file
+     * @param targetFile: target file
+     * @param numSourceFile: the number of source files
+     * @param numSourceElem: the number of items in one file
+     * @param numTargetFile: same as above
+     * @param numTargetElem: same as above
      * @return : an 2D ArrayList that stores the FINAL AA and reward(only targetTask)
      * @throws IOException
      */
@@ -116,7 +119,7 @@ public class ReadFiles {
                                                                             int numTargetElem) throws IOException {
         ArrayList< ArrayList<Double> > return2D = new ArrayList<>();
 
-        /**SOURCE
+        /*SOURCE
          */
         // container for storing columns:
         ArrayList< ArrayList<Double> > container_;
@@ -140,7 +143,7 @@ public class ReadFiles {
 //        System.out.println(lastElem + "   the last elem is");
 
         //">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(1)>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-        /**
+        /*
          * TARGET
          */
         //container
@@ -181,16 +184,14 @@ public class ReadFiles {
         return2D.add(targetContainer_.get(1));
 
         return return2D;
-
-
     }
 
     /**See log for design details
      * read target return.txt, accumulate and ceil the Actions(1st column of the container)
-     * @param targetFilePath
-     * @param numFiles
-     * @param numElem
-     * @return
+     * @param targetFilePath: target file path
+     * @param numFiles: number of files
+     * @param numElem: number of items in each file
+     * @return an 2D ArrayList that stores the reward and FINAL AA (with source)
      * @throws IOException
      */
     public ArrayList< ArrayList<Double> > targetAAAndR_noLastElemFromSource(String targetFilePath,

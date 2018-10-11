@@ -8,6 +8,10 @@ import java.util.ArrayList;
 
 import static plot.Plot.callPlot;
 
+/**
+ * multiple plots in one window, with source offset
+ * @author junhui
+ */
 public class App_FineGrainPlots_SourceOffset {
 
     /* CHANGE:
@@ -34,7 +38,7 @@ public class App_FineGrainPlots_SourceOffset {
         // layer0 end
 
         // layer 1 TL with different E:
-        String parentPath = "/media/junhui/DATA/project_data_files/Experiment_paperSA/"; //!!!!!!!!!!!!!!!!!!!
+        String parentPath = "/media/junhui/DATA/project_data_files/Experiment_1/"; //!!!!!!!!!!!!!!!!!!!
 
         ArrayList< ArrayList< ArrayList<Double> > > trunk = new ArrayList<>();
 

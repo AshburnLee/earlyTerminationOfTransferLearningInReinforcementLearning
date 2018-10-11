@@ -5,9 +5,26 @@ import plot.Plot;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * the areas metrics
+ *
+ * @author junhui
+ */
 public class Algorithm_area {
 
 
+    /**
+     * calculate all areas for different number of learning in the source and store them
+     * in two ArrayLists, for further operation
+     *
+     * @param parentPath: the parent path
+     * @param numPlots: the numbe rof files
+     * @param interval: the interval in the x-axis
+     * @param numFileInTXT: the number of file in one return.txt
+     * @param ME: the vertical threshold
+     * @param check: check the approximate point or mot
+     * @param sort: sort by value
+     */
     public void getAllAreasForAllE(String parentPath,
                                    int numPlots,
                                    int interval,
@@ -83,7 +100,6 @@ public class Algorithm_area {
             System.out.println(sortedMap.values());
         }
 
-
         //plot areas vs E
         Plot.callPlot("Areas vs E", "Areas over episodes","Episodes/2","Areas",
                 6, 0, numPlots, interval,
@@ -92,7 +108,7 @@ public class Algorithm_area {
     }
 
     /**
-     *
+     * add all areas to get the final area.
      * @param AA: Accumulative actions
      * @param R: reward
      * @param ME: the specific AA a user choose

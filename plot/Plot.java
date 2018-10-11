@@ -12,7 +12,10 @@ import org.jfree.ui.RefineryUtilities;
 import java.awt.*;
 import java.util.ArrayList;
 
-
+/**
+ * This is used for visualization.
+ * @author junhui
+ */
 public class Plot extends ApplicationFrame {
 
     /**
@@ -24,7 +27,8 @@ public class Plot extends ApplicationFrame {
     }  // constructor have no return type
 
 
-    /**Plot the reward over episodes
+    /**
+     * Plot the reward over episodes
      * use JFreechart to plot.
      * @param Y: the list with received reward for each episode
      * call callPlot to
@@ -42,12 +46,14 @@ public class Plot extends ApplicationFrame {
         if (X == null) {
             int length = Y.size();
 
+            //create a container to store data
             XYSeries series = new XYSeries(legend);
             for (int i = 0; i < length; i++) {
                 series.add(i + 1, Y.get(i));
             }
             final XYSeriesCollection data = new XYSeriesCollection(series);
 
+            //create a chart
             final JFreeChart chart = ChartFactory.createXYLineChart(
                     title,
                     xAxisLable,
@@ -94,13 +100,13 @@ public class Plot extends ApplicationFrame {
 
 
     /**
-     *
-     * @param numPlots
-     * @param interval
-     * @param title
+     * Plot multiple lines in one window
+     * @param numPlots: number of plots
+     * @param interval: the interval for the x-axis
+     * @param title: the title of this window
      * @param zeroX: AA of 0 E learned from source
      * @param zeroY: R of 0 E learned from source
-     * @param al
+     * @param al: a vector of containers contains Xs and Ys
      */
     private void PlotMultipleLineChart(int numPlots,
                                        int interval,
@@ -161,6 +167,11 @@ public class Plot extends ApplicationFrame {
         }
     }
 
+    /**
+     * This is just for report illustration
+     * @param title: the title of the window
+     * @param al: a vector of containers contains Xs and Ys
+     */
     private void PlotJustForPaper( String title, ArrayList<Double>...al) {
 
         if(al.length == 0)
@@ -248,8 +259,6 @@ public class Plot extends ApplicationFrame {
                     "Reward",
                     data);
 
-
-
             // 3) create panel
             ChartPanel chartPanel = new ChartPanel(chart);
             chartPanel.setPreferredSize(new Dimension(1000,500));
@@ -260,13 +269,13 @@ public class Plot extends ApplicationFrame {
     }
 
     /**
-     *
-     * @param numPlots
-     * @param interval
-     * @param title
+     * Put multiple scatter plots in one window
+     * @param numPlots: the number of plots in that window
+     * @param interval: interval for the x-axis
+     * @param title: the title of the window
      * @param zeroX: AA of 0 E learned from source
      * @param zeroY: R of o E learned from source
-     * @param al
+     * @param al: a vector of containers contains Xs and Ys
      */
     private void PlotScatterCharts(int numPlots,
                                    int interval,
@@ -286,7 +295,6 @@ public class Plot extends ApplicationFrame {
                     break;
                 }
             }
-
 
             //1) create dataset loop version
 
@@ -308,8 +316,6 @@ public class Plot extends ApplicationFrame {
 //            dataset.addSeries(series2);
 
 
-
-
              //* loop version:  the object of dataset can have the same name!!! (^_^)
 
 //            int numPlots = 5;  //!!!!!!!!!!!!!!!!!!!!
@@ -326,7 +332,7 @@ public class Plot extends ApplicationFrame {
             }
             //layer zero end
 
-            // we need 5 plots in the same window
+            // we need multiple plots in the same window
             for(int k = 0; k < numPlots;k++ ){
 
                 XYSeries series = new XYSeries("learn " + (k+1)*interval +" Episodes");
@@ -339,13 +345,11 @@ public class Plot extends ApplicationFrame {
                 dataset.addSeries(series);
             }
 
-
             // 2) create chart
             JFreeChart chart = ChartFactory.createScatterPlot(title,
                     "Accumulative Actions",
                     "Rewards",
                     dataset);
-
 
             // 3) create panel
             ChartPanel chartPanel = new ChartPanel(chart);
@@ -392,7 +396,7 @@ public class Plot extends ApplicationFrame {
     /**Smooth the line by sliding
      * @param oldList: original list
      * @param slidingWindow: the size of sliding window
-     * @return: a new list
+     * @return  a new list
      */
     public static ArrayList<Double> SmoothBySlide(ArrayList<Double> oldList, int slidingWindow){
         ArrayList<Double> newList = new ArrayList<>(); // vector
@@ -453,18 +457,18 @@ public class Plot extends ApplicationFrame {
 //    }
 
     /**
-     *
-     * @param title
-     * @param legend
-     * @param xAxisLabel
-     * @param yAxisLabel
-     * @param chooseMethod
-     * @param slidingWindow
-     * @param numPlots
-     * @param interval
-     * @param zeroX
-     * @param zeroY
-     * @param al
+     * the entry of plotting
+     * @param title: the title
+     * @param legend: the legend
+     * @param xAxisLabel: the x-axis label
+     * @param yAxisLabel: the y-axis label
+     * @param chooseMethod: which method to use
+     * @param slidingWindow: the size of the sliding window
+     * @param numPlots: the number of plots
+     * @param interval: interval in the x-axis
+     * @param zeroX: x for learning 0 episode in the source
+     * @param zeroY: y for learning 0 episode in the source
+     * @param al: a vector of containers contains Xs and Ys
      */
     public static void callPlot(String title,
                                 String legend,

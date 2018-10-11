@@ -36,6 +36,10 @@ import java.io.File;
 import java.util.*;
 
 
+/**
+ * testing for blockdude
+ * @author junhui
+ */
 public class JunhuiBlockDude {
 
     BlockDude bd;

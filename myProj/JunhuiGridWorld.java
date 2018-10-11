@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
+/**
+ * testing the GridWorld
+ */
 public class JunhuiGridWorld{
 
     GridWorldDomain gwd;
@@ -67,7 +70,10 @@ public class JunhuiGridWorld{
         env = new SimulatedEnvironment(domain, initialState);
     }
 
-    /* Q learning implementation */
+    /**
+     * Q learning implementation
+     * @param outpath: the file to store information
+     */
     public void qLearning(String outpath) {
         LearningAgent agent = new QLearning(domain, 0.99, hashFactory, 0.0, 1.0);
 
@@ -92,14 +98,23 @@ public class JunhuiGridWorld{
         visulizeValueFunction((ValueFunction)agent, new GreedyQPolicy((QProvider) agent));
     }
 
-    /* visualize all the values in every states. */
+
+    /**
+     * visualize all the values in every states.
+     * @param valueFunction: the value function
+     * @param p: the policy
+     */
     public void visulizeValueFunction(ValueFunction valueFunction, Policy p){
         List<State> allStates = StateReachability.getReachableStates(initialState, domain, hashFactory);
         ValueFunctionVisualizerGUI gui = GridWorldDomain.getGridWorldValueFunctionVisualization(allStates, 11,11,valueFunction, p);
         gui.initGUI();
     }
 
-    /* Sarsa Learning implementation */
+
+    /**
+     * Sarsa Learning implementation
+     * @param outpath: file to store information
+     */
     public void SarsaLearning(String outpath){
         LearningAgent agent = new SarsaLam(domain, 0.99, hashFactory, 0.0, 0.5, 0.3);
 
@@ -114,7 +129,9 @@ public class JunhuiGridWorld{
         }
     }
 
-    /* visualize the learning process */
+    /**
+     *  visualize the learning process
+     **/
     public void visualize(String outpath){
         Visualizer v = GridWorldVisualizer.getVisualizer(gwd.getMap());
         new EpisodeSequenceVisualizer(v, domain, outpath);
@@ -129,7 +146,10 @@ public class JunhuiGridWorld{
     }
 
 
-    /* Entry */
+    /**
+     * Entry
+     * @param args
+     */
     public static void  main(String[] args){
         System.out.println("This is a test of a Grid world");
         JunhuiGridWorld example = new JunhuiGridWorld(100);

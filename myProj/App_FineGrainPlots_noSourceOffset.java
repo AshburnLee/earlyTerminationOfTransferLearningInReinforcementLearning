@@ -7,6 +7,11 @@ import java.util.ArrayList;
 
 import static plot.Plot.callPlot;
 
+/**
+ * multiple plots in one window, without source offset
+ *
+ * @author junhui
+ */
 public class App_FineGrainPlots_noSourceOffset {
 
 
@@ -35,7 +40,7 @@ public class App_FineGrainPlots_noSourceOffset {
 
 
         // layer1 with different E
-        String parentPath = "/media/junhui/DATA/project_data_files/Experiment_paperSA/";  //!!!!!!!!!!!!!!!!!!!!!
+        String parentPath = "/media/junhui/DATA/project_data_files/Experiment_1/";  //!!!!!!!!!!!!!!!!!!!!!
         int numPlots = 15; //!!!!!!!!!!!!!!!!!!!!!!
         int interval = 2;  //!!!!!!!!!!!!!!!!!!!!!!
         ArrayList< ArrayList< ArrayList<Double> > > trunk = new ArrayList<>();
@@ -116,8 +121,6 @@ public class App_FineGrainPlots_noSourceOffset {
                 trunk.get(14).get(0),
                 Plot.SmoothBySlide(trunk.get(14).get(1), 20)
         );
-
-
 
     }
 }

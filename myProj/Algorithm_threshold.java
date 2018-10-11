@@ -6,9 +6,23 @@ import static plot.Plot.callPlot;
 import java.io.IOException;
 import java.util.*;
 
-
+/**
+ * the threshold metrics for both strong and weak transfer
+ * @author junhui
+ */
 public class Algorithm_threshold {
 
+    /**
+     * Find the index of the global optimal
+     * @param offset: with offset or not
+     * @param threshold: the threshold value
+     * @param parentPath: the parent path
+     * @param numPlots: the number of plots
+     * @param numFileInTXT: the number of file in the return.txt file
+     * @param interval: interval in the x-axis
+     * @param sort: sort or not
+     * @return the index of the minimum
+     */
     public double findIndexOfMin(boolean offset,
                                  double threshold,
                                  String parentPath,
@@ -171,6 +185,12 @@ public class Algorithm_threshold {
         return E.get(index);
     }
 
+    /**
+     * For plot
+     * @param AA_r: number of actions to reach the threshold
+     * @param numPlots: the number of plots
+     * @param interval: the interval in x-axis
+     */
     private static void globalOrLocal(ArrayList<Double> AA_r, int numPlots, int interval) {
 
         callPlot("Threshold vs E",
@@ -210,11 +230,11 @@ public class Algorithm_threshold {
     }
 
     /**
-     * NO use here
+     * binary search (Not in use)
      * @param AA_r:
-     * @param l:
-     * @param r:
-     * @param x:
+     * @param l: left value
+     * @param r: right value
+     * @param x: object value
      * @return the index of x
      */
     private static int BinarySearch(ArrayList<Double> AA_r, int l, int r, double x) {
@@ -236,6 +256,11 @@ public class Algorithm_threshold {
         return -1;
     }
 
+    /**
+     * Sort by vale
+     * @param originalMap: the map to be sorted
+     * @return sorted map
+     */
     private static Map<Integer, Double> sortByValue(Map<Integer, Double> originalMap) {
 
         //1. convert map to list of map

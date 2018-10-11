@@ -11,6 +11,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.io.File;
 
+/**
+ * this is used for finding how many actions an agent takes to reach the maximum rewards.
+ * decide how many actions taken represents completely learning in the source.
+ * @author junhui
+ */
 public class App_PlotSourceRewardOverEpisodes2FindOptimalE{
 
 
@@ -29,13 +34,13 @@ public class App_PlotSourceRewardOverEpisodes2FindOptimalE{
         //chose maps:
         BlockDudeState BDStateSource = BlockDudeTransferLearning_UTILS.initialState_2; //!!!!!!!!!!!
 
+        //perform reinforcement learning
         myBlockDudeTransferLearning source = new myBlockDudeTransferLearning(BDStateSource, 8);
         int nEpochs = 20;
         int nEpisodes = 200;
 
         TLLinearVFA sourceVFA = source.PerformLearningAlgorithm(
                 outputSource, 2, nEpochs, nEpisodes,null);
-
 
 
         //set nEpochs1 as 20, and average it:

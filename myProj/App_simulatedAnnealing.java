@@ -3,6 +3,10 @@ package myProj;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * apply SA to the data set
+ * @author junhui
+ */
 public class App_simulatedAnnealing{
 
     public static void main(String[] args) {
@@ -14,7 +18,7 @@ public class App_simulatedAnnealing{
         Integer[] Es = {2,  4, 6,  8,  10,  12, 14, 16, 18, 20, 22, 24, 26, 28, 30};
         ArrayList<Integer> episodes = new ArrayList<Integer>(Arrays.asList(Es));
 
-        //
+        //execute searching
         Algorithm_simulated_annealing sa = new Algorithm_simulated_annealing();
         sa.simulatedAnnealing(parentPath, episodes, 100, 0.1);
 
