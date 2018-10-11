@@ -20,7 +20,7 @@ resources can be reduced from unnecessary executions.
 [Eclipse](https://www.eclipse.org/downloads/) or [intelliJ](https://www.jetbrains.com/idea/download/#section=linux) are recommended. The advantage of using an IDE is that [maven](https://maven.apache.org/download.cgi) is built-in, and users do not have to download it. 
 
 2. Create a maven project and configure it
-Create a maven project. After the project is created, find the pom.xml. ```add the following in <dependencies></dependencies>.```
+Create a maven project. After the project is created, find the pom.xml. add the following in ```<dependencies></dependencies>.```
 ```HTML
     <dependency>
       <groupId>edu.brown.cs.burlap</groupId>
