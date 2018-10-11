@@ -1,4 +1,4 @@
-# earlyTerminationOfTransferLearningInReinforcementLearning
+# EarlyTerminationOfTransferLearningInReinforcementLearning
 
 Machine learning algorithms tend to consume lots of time and computational resources to
 complete tasks. So finding methods to reduce the execution time and the computational
@@ -41,4 +41,8 @@ Here is the discription of folders and files:
 - *ReadFiles.java*: This class is used for reading files and operating original data set and put operated data set in containers
 - *TestParallel.java*: parallel execution to create data set
 - *TestSerial.java*: serial way of execution
-
+---
+### BlockDude
+This folder is created by Francesco Foglino.
+### TransferLearning
+This folder is created by Francesco Foglino as well, some files in this folder are used in my project.
