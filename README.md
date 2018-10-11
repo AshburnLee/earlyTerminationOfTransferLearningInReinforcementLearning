@@ -14,7 +14,7 @@ Therefore the goal of this project is finding a general method to early terminat
 processes in the source tasks of reinforcement learning problems. So that the consumption of
 resources can be reduced from unnecessary executions.
 
-Here is the discription of folders and files:
+## Here is the discription of folders and files:
 ---
 ### plot
 - *Plot.java*: the class for results visualization.
