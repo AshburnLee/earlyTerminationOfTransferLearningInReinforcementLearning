@@ -15,10 +15,9 @@ processes in the source tasks of reinforcement learning problems. So that the co
 resources can be reduced from unnecessary executions.
 
 ## Here is the discription of folders and files:
----
 ### plot
 - *Plot.java*: the class for results visualization.
----
+
 ### myProj
 - *Algorithm_area.java*: used for calculate areas enclosed by the Accumulate Actions of the starting point and the Accumulate Actions of the vertical threshold.
 - *Algorithm_simulated_annealing.java*: the implementation of simulated annealing.
@@ -41,7 +40,7 @@ resources can be reduced from unnecessary executions.
 - *ReadFiles.java*: This class is used for reading files and operating original data set and put operated data set in containers
 - *TestParallel.java*: parallel execution to create data set
 - *TestSerial.java*: serial way of execution
----
+
 ### BlockDude
 This folder is created by Francesco Foglino.
 ### TransferLearning
