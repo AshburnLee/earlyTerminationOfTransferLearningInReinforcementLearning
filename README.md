@@ -1,5 +1,6 @@
 # EarlyTerminationOfTransferLearningInReinforcementLearning
 
+## Summary
 Machine learning algorithms tend to consume lots of time and computational resources to
 complete tasks. So finding methods to reduce the execution time and the computational
 resources consumption is important for the development in this area. Some effective methods
@@ -14,7 +15,30 @@ Therefore the goal of this project is finding a general method to early terminat
 processes in the source tasks of reinforcement learning problems. So that the consumption of
 resources can be reduced from unnecessary executions.
 
-## Here is the discription of folders and files:
+## User manual
+1. Download the IDE for java
+[Eclipse](https://www.eclipse.org/downloads/) or [intelliJ](https://www.jetbrains.com/idea/download/#section=linux) are recommended. The advantage of using an IDE is that [maven](https://maven.apache.org/download.cgi) is built-in, and users do not have to download it. 
+
+2. Create a maven project and configure it
+Create a maven project. After the project is created, find the pom.xml. add the following in <dependencies></dependencies>.
+```HTML
+    <dependency>
+      <groupId>edu.brown.cs.burlap</groupId>
+      <artifactId>burlap</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jfree</groupId>
+      <artifactId>jfreechart</artifactId>
+      <version>1.0.19</version>
+    </dependency>
+```
+By doing this, BURLAP and jFreeChart can be used in users projects.
+
+3. Put all these folders under the 
+
+## Discription of folders and files:
 ### plot
 - *Plot.java*: the class for results visualization.
 
@@ -42,6 +66,6 @@ resources can be reduced from unnecessary executions.
 - *TestSerial.java*: serial way of execution
 
 ### BlockDude
-This folder is created by Francesco Foglino.
+This folder is created by Francesco Foglino, and is used for creating the BlockDude reinforcement learning environment.
 ### TransferLearning
 This folder is created by Francesco Foglino as well, some files in this folder are used in my project.
