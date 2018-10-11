@@ -34,9 +34,10 @@ Create a maven project. After the project is created, find the pom.xml. add the 
       <version>1.0.19</version>
     </dependency>
 ```
-By doing this, BURLAP and jFreeChart can be used in users projects.
+    By doing this, BURLAP and jFreeChart can be used in users projects.
 
-3. Put all these folders under the 
+3. Put all these folders in user's project
+Navigate to src->main->java. Put all folders in here. 
 
 ## Discription of folders and files:
 ### plot
