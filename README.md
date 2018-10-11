@@ -1,24 +1,14 @@
 # EarlyTerminationOfTransferLearningInReinforcementLearning
 
 ## Summary
-Machine learning algorithms tend to consume lots of time and computational resources to
-complete tasks. So finding methods to reduce the execution time and the computational
-resources consumption is important for the development in this area. Some effective methods
-have been built to optimize it. For instance in the hardware level, multi-core technology of CUP
-and the CUDA of Nvidia GPU have been widely used when working with computation intense
-tasks. In the system level, Hadoop is a popular architecture used in distributed computing
-systems. In the software level, transfer learning has made huge success. The background of
-this project is using transfer learning to reinforcement learning. And it seems that agents do
-not have to learn in the source task completely.
+Machine learning algorithms tend to consume lots of time and computational resources to complete tasks. So finding methods to reduce the execution time and the computational resources consumption is important for the development in this area. Some effective methods have been built to optimize it. For instance in the hardware level, multi-core technology of CUP and the CUDA of Nvidia GPU have been widely used when working with computation intense tasks. In the system level, Hadoop is a popular architecture used in distributed computing systems. In the software level, transfer learning has made huge success. The background of this project is using transfer learning to reinforcement learning. And it seems that agents do not have to learn in the source task completely.
 
-Therefore the goal of this project is finding a general method to early terminate the learning
-processes in the source tasks of reinforcement learning problems. So that the consumption of
-resources can be reduced from unnecessary executions.
+Therefore the goal of this project is finding a general method to early terminate the learning processes in the source tasks of reinforcement learning problems. So that the consumption of resources can be reduced from unnecessary executions.
 
-## User manual
+## How to use these code
 1. Download the IDE for java
 
-[Eclipse](https://www.eclipse.org/downloads/) or [intelliJ](https://www.jetbrains.com/idea/download/#section=linux) are recommended. The advantage of using an IDE is that [maven](https://maven.apache.org/download.cgi) is built-in, and users do not have to download it. 
+[Eclipse](https://www.eclipse.org/downloads/) or [intelliJ](https://www.jetbrains.com/idea/download/#section=linux) are recommended. The advantage of using an IDE is that [maven](https://maven.apache.org/download.cgi) is built-in, and users do not have to download it and learn the command line if users are new to maven. 
 
 2. Create a maven project and configure it
 
@@ -36,13 +26,21 @@ Create a maven project. After the project is created, find the pom.xml. add the 
       <version>1.0.19</version>
     </dependency>
 ```
-By doing this, BURLAP and jFreeChart can be used in users projects.
+By doing this, BURLAP and jFreeChart can be used in users projects. Now 
 
-3. Put all these folders in user's project
+3. Put folders in user's project
 
-Navigate to src->main->java. Put all folders in here. 
+Navigate to ```src->main->java```. Put all folders except ```project_data_files``` in here. 
+Put ```project_data_files``` outside of this maven project. The reason to do this is because the IDE may get crushed when the size of this data files increase.
+Suppose users put this folder in ```/yourPath/project_data_files```. While in my project all the data path are given as: ```/media/junhui/DATA/project_data_files/.../```in all java files.
+Therefor users have to change all ```/media/junhui/DATA/project_data_files/``` to ```~/yourPath/project_data_files```.
 
-## Discription of folders and files:
+For instance, in the file *App_myBlockDude.java*, one path is given like this: ```String parentPath = "/media/junhui/DATA/project_data_files/Experiment_paperSA/";```.
+users have to change it to ```String parentPath = "/yourPath/project_data_files/Experiment_paperSA/";```. 
+
+Now users can create a *HelloWorld.java* program for testing.If everything went well, this testing should run successfully.  
+
+## Description of folders and files:
 ### plot
 - *Plot.java*: the class for results visualization.
 
@@ -73,3 +71,5 @@ Navigate to src->main->java. Put all folders in here.
 This folder is created by Francesco Foglino, and is used for creating the BlockDude reinforcement learning environment.
 ### TransferLearning
 This folder is created by Francesco Foglino as well, some files in this folder are used in my project.
+### BlockDude
+This folder is created by Francesco Foglino as well, these files supports other operations.
