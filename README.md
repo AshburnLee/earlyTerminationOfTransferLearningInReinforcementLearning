@@ -86,5 +86,5 @@ Bare in mind: change parameters accordingly .
 This folder is created by Francesco Foglino, and is used for creating the BlockDude reinforcement learning environment.
 ### TransferLearning
 This folder is created by Francesco Foglino as well, some files in this folder are used in my project.
-### BlockDude
+### GridWorld
 This folder is created by Francesco Foglino as well, these files supports other operations.
